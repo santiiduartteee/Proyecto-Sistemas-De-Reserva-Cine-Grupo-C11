@@ -65,4 +65,15 @@ def reservar_entradas():
             confirmar = input(f"Importe total: ${importe_total}. Confirmar reserva (s/n): ").lower()
             if confirmar != 's':
                 print("Reserva cancelada.")
-                return        
+                return  
+
+            # Reservar actualizando datos
+            peliculas[pelicula_id]['horarios'][horario_id]['vendidos'] += entradas
+            estadisticas['ventas_pelicula'][pelicula_id] += entradas
+            estadisticas['ventas_horario'][(pelicula_id, horario_id)] += entradas
+            estadisticas['total_entradas'] += entradas
+
+            print("Reserva exitosa.")
+            return
+        except ValueError:
+            print("Entrada inválida, por favor ingrese un número.")      
