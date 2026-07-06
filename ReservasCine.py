@@ -15,3 +15,14 @@ estadisticas = {
     "ventas_horario": {(1,1): 0, (1,2): 0, (2,1): 0, (2,2): 0},
     "total_entradas": 0
 }
+
+def mostrar_peliculas():
+    print("Películas disponibles:")
+    for clave, valor in peliculas.items():
+        print(f"{clave}. {valor['nombre']}")
+
+def mostrar_horarios(pelicula_id):
+    print(f"Horarios para {peliculas[pelicula_id]['nombre']}:")
+    for clave, info in peliculas[pelicula_id]['horarios'].items():
+        disponibilidad = info['capacidad'] - info['vendidos']
+        print(f"{clave}. {info['hora']} - Entradas disponibles: {disponibilidad}")
