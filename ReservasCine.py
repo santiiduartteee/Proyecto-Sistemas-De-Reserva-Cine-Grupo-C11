@@ -26,3 +26,26 @@ def mostrar_horarios(pelicula_id):
     for clave, info in peliculas[pelicula_id]['horarios'].items():
         disponibilidad = info['capacidad'] - info['vendidos']
         print(f"{clave}. {info['hora']} - Entradas disponibles: {disponibilidad}")
+
+def reservar_entradas():
+    while True:
+        try:
+            mostrar_peliculas()
+            pelicula_id = int(input("Seleccione la película (número): "))
+            if pelicula_id not in peliculas:
+                print("Película no válida, intente de nuevo.")
+                continue
+
+            mostrar_horarios(pelicula_id)
+            horario_id = int(input("Seleccione el horario (número): "))
+            if horario_id not in peliculas[pelicula_id]['horarios']:
+                print("Horario no válido, intente de nuevo.")
+                continue
+
+            entradas = int(input("Cantidad de entradas a reservar: "))
+            if entradas <= 0:
+                print("Debe ingresar una cantidad positiva.")
+                continue
+
+            capacidad = peliculas[pelicula_id]['horarios'][horario_id]['capacidad']
+            vendidos = peliculas[pelicula_id]['horarios'][horario_id]['vendidos']        
