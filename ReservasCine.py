@@ -76,4 +76,17 @@ def reservar_entradas():
             print("Reserva exitosa.")
             return
         except ValueError:
-            print("Entrada inválida, por favor ingrese un número.")      
+            print("Entrada inválida, por favor ingrese un número.")
+
+def mostrar_estadisticas():
+    print("\n----- Estadísticas -----")
+    print("Películas más elegidas:")
+    for pid, total in estadisticas['ventas_pelicula'].items():
+        print(f"{peliculas[pid]['nombre']}: {total} entradas")
+
+    print("\nHorarios con mayor demanda:")
+    for (pid, hid), total in estadisticas['ventas_horario'].items():
+        if total > 0:
+            print(f"{peliculas[pid]['nombre']} - {peliculas[pid]['horarios'][hid]['hora']}: {total} entradas")
+
+    print(f"\nTotal de entradas vendidas: {estadisticas['total_entradas']}\n")            
