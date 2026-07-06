@@ -48,4 +48,21 @@ def reservar_entradas():
                 continue
 
             capacidad = peliculas[pelicula_id]['horarios'][horario_id]['capacidad']
-            vendidos = peliculas[pelicula_id]['horarios'][horario_id]['vendidos']        
+            vendidos = peliculas[pelicula_id]['horarios'][horario_id]['vendidos']
+
+            if entradas > (capacidad - vendidos):
+                print("No hay suficientes entradas disponibles para ese horario.")
+                continue
+
+            # Cálculo de importe con promoción simple 2x1
+            if promocion_2x1:
+                entradas_a_pagar = (entradas // 2) + (entradas % 2)
+            else:
+                entradas_a_pagar = entradas
+
+            importe_total = entradas_a_pagar * precio_entrada
+
+            confirmar = input(f"Importe total: ${importe_total}. Confirmar reserva (s/n): ").lower()
+            if confirmar != 's':
+                print("Reserva cancelada.")
+                return        
