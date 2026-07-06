@@ -89,4 +89,25 @@ def mostrar_estadisticas():
         if total > 0:
             print(f"{peliculas[pid]['nombre']} - {peliculas[pid]['horarios'][hid]['hora']}: {total} entradas")
 
-    print(f"\nTotal de entradas vendidas: {estadisticas['total_entradas']}\n")            
+    print(f"\nTotal de entradas vendidas: {estadisticas['total_entradas']}\n")
+
+def menu():
+    while True:
+        print("\n--- Sistema de Reservas de Cine ---")
+        print("1. Reservar entradas")
+        print("2. Ver estadísticas")
+        print("3. Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == '1':
+            reservar_entradas()
+        elif opcion == '2':
+            mostrar_estadisticas()
+        elif opcion == '3':
+            print("Gracias por usar el sistema.")
+            break
+        else:
+            print("Opción inválida, intente de nuevo.")
+
+if __name__ == "__main__":
+    menu()                
