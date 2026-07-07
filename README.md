@@ -39,3 +39,12 @@ base de datos ni archivos externos: al cerrar el programa, los datos se pierden.
 3 --> Salir del programa: imprime un mensaje de despedida ("Gracias por usar el sistema.").
 
 
+
+4. Usar el menú interactivo:
+
+   - **1** → Reservar entradas (elegir película, horario y cantidad, y confirmar con `s`).
+
+   - **2** → Ver estadísticas de ventas: muestra un resumen con la cantidad de entradas vendidas por cada película, la demanda de cada horario (solo se listan los horarios que tuvieron al menos una venta) y el total general de entradas vendidas hasta el momento. Después de mostrarlo, vuelve automáticamente al menú principal.
+
+   - **3** → Salir del programa: imprime un mensaje de despedida ("Gracias por usar el sistema.") y termina la ejecución, cerrando el bucle principal (`menu()`). No se guardan los datos: si se vuelve a ejecutar el programa, las ventas y estadísticas arrancan de cero.
+
