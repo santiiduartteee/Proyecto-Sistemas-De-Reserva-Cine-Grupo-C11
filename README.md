@@ -13,14 +13,13 @@
 Descripción general
 
 El sistema permite:
-**.Consultar películas y horarios disponibles, junto con la cantidad de entradas restantes por función.**
-**.Reservar una cantidad de entradas para una película y horario específicos, validando que haya disponibilidad.**
-**.Aplicar automáticamente una promoción 2x1 sobre el importe a pagar.**
-**.Registrar estadísticas globales: entradas vendidas por película, por horario y el total general.**
+- Consultar películas y horarios disponibles, junto con la cantidad de entradas restantes por función.
+- Reservar una cantidad de entradas para una película y horario específicos, validando que haya disponibilidad.
+- Aplicar automáticamente una promoción 2x1 sobre el importe a pagar.
+- Registrar estadísticas globales: entradas vendidas por película, por horario y el total general.
 
-Toda la información (películas, horarios, capacidad, ventas y estadísticas) se guarda 
-en memoria mientras el programa está corriendo, usando diccionarios de Python. No hay 
-base de datos ni archivos externos: al cerrar el programa, los datos se pierden.
+Toda la información (películas, horarios, capacidad, ventas y estadísticas) se guarda en memoria mientras el programa está corriendo, usando diccionarios de Python. No hay base de datos ni archivos externos: al cerrar el programa, los datos se pierden.
+
 
 
 **Instrucciones de ejecución**
@@ -35,7 +34,7 @@ base de datos ni archivos externos: al cerrar el programa, los datos se pierden.
    python ReservasCine.py
    ```
 
-   (en algunos sistemas el comando es `python3 ReservasCine.py`).
+  
 
 **python ReservasCine.py**
 
