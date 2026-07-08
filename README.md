@@ -5,8 +5,9 @@
 **_Fernandez Eugenia**
 **_Suárez Mauro**
 
-**COMISION K1.3 C**
+**COMISION K1.3 C**  
 
+**LINK DEL VIDEO EXPLICATIVO:** https://drive.google.com/drive/folders/1nY5eAkMQotDfc716iAGtolZLaBCmnH6S?usp=sharing
 
 **Sistema de Reservas de Cine**
 
